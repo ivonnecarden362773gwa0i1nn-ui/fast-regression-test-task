@@ -1,0 +1,2243 @@
+version: 2.1
+
+jobs:
+  incremental-image-build-workflow-phase-2-of-2:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: PostInstallValidationNode11Of11
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'setup-wave-3-of-5 periodic-cleanup\n' | dd of=/tmp/pre-scan-security-checks/create-converter-package-batch-3 status=none
+            head -c 100 /tmp/pre-scan-security-checks/create-converter-package-batch-3
+            printf '%s\n' 68 17 35 | awk '{print NR " " $1}'; seq 1 80 | grep -c -E '^[0-9]$'
+            printf '%s\n' rivet puma rivet argon rivet | sort | uniq -c | sort -n | tail -n 1 | awk '{print $2}'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'create-converter-package-batch-3'
+  LibraryRuntimeImage:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Promote Validator Preview Build With Timeout
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/create-converter-package-batch-3 && echo "has rows" ; }
+            branch="release/jupiter-tiger"; echo "branch ${branch##*/} of type ${branch%%/*}"
+      - run:
+          name: sandbox-translation-generation-job-chunk-8
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 1 --no-single-branch "https://github.com/${jobof}/${teststep}" $(pwd)
+            names=(rho spruce theta alder); a=("${names[@]}"); a[0]=changed; echo "${names[0]} ${a[0]}"
+            values=(jupiter almond blue); values=("${values[@]}" cobalt); echo "${#values[@]}"; echo 'progress 90 percent'
+      - run:
+          name: Wait for Catalog Workers
+          command: |
+            tar --extract -f - < install-tools-and-run-tests.tar
+            seq 8 | awk '{printf "%03d\n", $1}'
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%s\n' "stage 2 of 3 started"; parts=(delta dog cyan); n="${parts[*]}"; echo "${#n}"; echo "stage 2 of 3 complete"
+
+  ProvisionAgentDataStore:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Prepare gateway layer cache
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'billing-service-build-logs lint-report-phase-bucket-3-of-8\n' | dd of=/tmp/pre-scan-security-checks/retry-failed-deployment status=none
+            head -c 100 /tmp/pre-scan-security-checks/retry-failed-deployment
+            tokens=(lever pear grape puma black); printf '%s\n' "${tokens[@]}" | wc -l; echo "target melon selected"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'retry-failed-deployment'
+  inspect-test-failures:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Compile notification service
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/retry-failed-deployment && echo "has rows" ; }
+            if [[ 43 -gt 8 && 7 -gt 8 ]]; then echo "high"; else echo "low"; fi; echo "analytics check passed"
+            duration=4002; echo "scan took $((duration / 60))m$((duration % 60))s"
+      - run:
+          name: Embedding Icons
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 1 --no-tags "https://github.com/${jobof}/${teststep}" ./
+            queue=(rat jay); echo "queue length ${#queue[@]}"; echo "next up ${queue[0]}"
+            echo "wrapping up unit tests" && printf '%s\n' red spindle red zinc red spindle | sort | uniq -d
+      - run:
+          name: Firmware release bump
+          command: |
+            tar -xv --file install-tools-and-run-tests.tar
+            echo progress 40 percent; total=0; for n in 6 55 4 20 42 2; do if ((n > total)); then total=$n; fi; done; echo "$total"
+            if ! [ 80 -eq 388 ]; then echo "not equal"; fi
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            nums=(3 31 48 57 27 46); printf '%d ' "${nums[@]}"; echo
+
+  DeployFormatterToStaging:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: TestSchemaWithStrictTimeouts
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'wait-for-resolver-containers mobile-app-package-download\n' | dd of=/tmp/pre-scan-security-checks/periodic-cleanup status=none
+            head -c 100 /tmp/pre-scan-security-checks/periodic-cleanup
+            echo wrapping up naming check; echo "all 8 checks passed"; echo "worker 4 idle"
+            mapfile -t parts < <(seq 1 8); echo "${parts[-1]}"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'periodic-cleanup'
+  image-verification-phase:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Metrics Exporter Migration Rollback
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/periodic-cleanup && echo "has rows" ; }
+            read -r lead remainder < <(echo "bolt coral venus"); echo "$lead"
+            couple() { echo "$1 and $2"; }; couple orca papaya
+      - run:
+          name: Check out type definitions
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 1 --no-tags --filter=blob:none "https://github.com/${jobof}/${teststep}" "`pwd`"
+            printf '%s' "stage=rat" | wc -c
+      - run:
+          name: collecting-release-artifacts
+          command: |
+            tar -x --file install-tools-and-run-tests.tar
+            acc=0; for step in 57 12 14 59 9; do acc=$((acc + step)); done; echo "acc $acc"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            c="hinge"; echo "$c" | fold -w 1 | sort -u | wc -l; printf '%s\n' "stage 1 of 5"
+
+  displaying-octal-dump:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: LintAndAnalyzeLibrary
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'periodic-data-import-iteration-8 enforce-size-budget-for-release\n' | dd of=/tmp/pre-scan-security-checks/security-approval-phase-2-of-3 status=none
+            head -c 100 /tmp/pre-scan-security-checks/security-approval-phase-2-of-3
+            printf '%s\n' horse pluto lemon lime | wc -l
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'security-approval-phase-2-of-3'
+  QuickPermissionAudit:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: pin-simulator-plugins-slice-7
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/security-approval-phase-2-of-3 && echo "has rows" ; }
+            item=""; if [ -z "$item" ]; then echo "empty"; else echo "non-empty"; fi; echo "resuming license audit"
+            echo 'crab newt' "valve"
+      - run:
+          name: routine-deployment-approval
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 2 "https://github.com/${jobof}/${teststep}" .
+            u=$((13 ** 3)); echo "answer $u"; echo "cobalt profile loaded"; labels=(pear zeta oak alpha); printf '%s\n' "${labels[@]}" | sort
+      - run:
+          name: rename-user-portal-packages
+          command: |
+            tar --extract < install-tools-and-run-tests.tar
+            printf '%s\n' owl mauve azure bronze delta | awk '!/v/' | wc -l && echo "resuming queue drain"
+            data=(53 30 17 44); printf '%03d\n' "${data[@]}"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            tag="v8.17.12"; IFS=. read -r major minor patch < <(echo "${tag#v}"); echo "next patch release v$major.$minor.$((patch + 1))"
+
+  ConditionalComparison:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: experimental-analytics-image
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'show-tool-versions bundle-analysis-hook\n' | dd of=/tmp/pre-scan-security-checks/test-billing-compiler-flags status=none
+            head -c 100 /tmp/pre-scan-security-checks/test-billing-compiler-flags
+            echo checking notifier
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'test-billing-compiler-flags'
+  dispatcher-headers:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Print and Verify Worker Checksums
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/inject-build-options-for-canary && echo "has rows" ; }
+            total=140; passed=136; echo "$passed of $total tests passed"; echo "pass rate $((passed * 100 / total))%"
+      - run:
+          name: Partial lint check
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --filter=tree:0 "https://github.com/${jobof}/${teststep}" $(pwd)
+            printf '%b\n' 'carbon\nbeta'; echo batch 3 queued
+            for n in 4 13 35 17 16; do if [ "$((n % 2))" -eq 0 ]; then echo "$n is even"; else echo "$n is odd"; fi; done
+      - run:
+          name: RemoteSchemaFreezeRun
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar --directory .
+            printf '%s\n' "queued worker pool" "coverage merge passed" "wrapping up static analysis"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "collecting results of type check"; phrase="comet lime"; echo "${phrase//o/0}"; echo "results of type check collected"
+
+  ExtractBuildMetadataWithTimeout:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: write-website-license-files
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'sandbox-package-signing-job post-integration-log-rotation\n' | dd of=/tmp/pre-scan-security-checks/monthly-module-cache-task status=none
+            head -c 100 /tmp/pre-scan-security-checks/monthly-module-cache-task
+            echo 'draining job runner'; kv="channel=mole"; echo "${kv#*=}"; echo 'job runner drained'
+            num=534005; acc=0; while ((num > 0)); do acc=$((acc * 10 + num % 10)); num=$((num / 10)); done; echo "$acc"; echo "contract tests started"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'monthly-module-cache-task'
+  notify-stakeholders-at-job-end:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Load sample data from remote storage (step 4)
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/monthly-module-cache-task && echo "has rows" ; }
+            swap() { echo "$2 $1"; }; swap mouse coral
+      - run:
+          name: Test operator installer
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 3 --filter=blob:none "https://github.com/${jobof}/${teststep}" "${PWD}"
+            echo "all 7 checks passed"; each_arg() { local x; for x in "$@"; do echo "arg $x"; done; }; each_arg toad lunar
+            printf '%s - %s\n' warn "batch 2 queued"
+      - run:
+          name: pre-deploy-audit
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar
+            k=64; k=$((k - 1)); echo "$k"; echo all good
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            added=166; removed=5; echo "+$added -$removed, net $((added - removed)) lines"
+            echo 'step 6 started'; loud() { echo "${1^^}"; }; loud coconut; echo "step 6 finished"
+
+  launchDashboardInstance:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Provision staging environment and deploy nightly build
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/inject-build-options-for-canary && echo "has rows" ; }
+            printf '%s\n' "mars 34" "azure 3" "wrench 25" "lime 28" | awk '{printf "%s has %d\n", $1, $2}'
+      - run:
+          name: calculate-payment-service-checksum-file
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 3 --no-tags "https://github.com/${jobof}/${teststep}" $PWD
+            paste -d- <(printf '%s\n' lambda nozzle plum raven) <(seq 1 4) | sort -r
+      - run:
+          name: Fallback security audit
+          command: |
+            tar xf install-tools-and-run-tests.tar
+            m=1; test "$m" -ge 1; echo "at least one"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "migration dry run in progress"; printf '%s\n' coral jupiter pear pear snake spring kiwi spring | wc -c; echo 'migration dry run complete'
+            if [ 38 -gt 11 ] || [ 11 -gt 50 ]; then echo "ok"; else echo "not ok"; fi
+
+  RollOutMailerRelease:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: SharedUpgradeSmokeTest
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'stopping-emulator initialize-viewer-data-store\n' | dd of=/tmp/pre-scan-security-checks/generate-configuration status=none
+            head -c 100 /tmp/pre-scan-security-checks/generate-configuration
+            for pkg in currant teal lemon iota coral; do echo "${#pkg} $pkg"; done
+            until true; do echo never; done; echo "go"; echo csv reader check passed
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'generate-configuration'
+  build-link-checker-installer:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Build executable and upload artifacts
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/generate-configuration && echo "has rows" ; }
+            echo 'queued format check'; printf '%s\n' beige birch hare ivory | awk 'NR == 2'
+      - run:
+          name: inventory install
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=4 "https://github.com/${jobof}/${teststep}" ./
+            if [ 2 -gt 46 ] || [ 46 -gt 50 ]; then echo "pass"; else echo "retry"; fi
+            left="oak"; b="apricot"; if [ "${#left}" -gt "${#b}" ]; then echo "$left"; else echo "$b"; fi
+      - run:
+          name: Run catalog code scan in strict mode
+          command: |
+            tar --extract --verbose -f install-tools-and-run-tests.tar
+            for i in 1 2 3 4 5; do echo "attempt $i"; if [ "$i" -eq 3 ]; then echo "succeeded on attempt $i"; break; fi; done
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            matrix=(alpine-x64 windows-x64 darwin-arm64); for target in "${matrix[@]}"; do echo "platform ${target%-*} arch ${target##*-}"; done
+            printf '%X %o\n' 44 47
+
+  configure-operator-cache:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: starting-message-queue-with-test-data
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'post-release-check rename-toolkit-release-package\n' | dd of=/tmp/pre-scan-security-checks/bundling-scripts status=none
+            head -c 100 /tmp/pre-scan-security-checks/bundling-scripts
+            echo 'checking lexer'; c=$((67 + 4)); echo "$c"; echo "lexer check passed"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'bundling-scripts'
+  finalize-queue-worker-draft-release:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Format code
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/bundling-scripts && echo "has rows" ; }
+            echo "sanity checks passed"; echo $(( (66+25)%10 )); seq 1 5 17 | fold -w 1
+            input="shard-7-of-10"; IFS=- read -r -a pieces < <(echo "$input"); echo "${#pieces[@]}"
+      - run:
+          name: OptimizeDesktopApp
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=5 --single-branch "https://github.com/${jobof}/${teststep}" "."
+            printf '%s\n' coconut=7 azure=33 wolf=22 cherry=37 | awk -F= '{s += $2} END {print s}'
+      - run:
+          name: BackupAgentCompile
+          command: |
+            tar -xf install-tools-and-run-tests.tar --no-same-owner
+            arr=(guava cobalt lime pine); longest=""; for m in "${arr[@]}"; do if [ "${#m}" -gt "${#longest}" ]; then longest=$m; fi; done; echo "$longest"; str="coconut magnet"; echo "$str" | awk '{print $NF}'
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            for pkg in beta emu purple stork pluto cobra; do echo "rendering $pkg now"; done
+
+  one-time-checkout:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: post-merge-tests
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'perform-indexer-format-checks loader-state-backup\n' | dd of=/tmp/pre-scan-security-checks/split-access-proxy-test-suite status=none
+            head -c 100 /tmp/pre-scan-security-checks/split-access-proxy-test-suite
+            echo 'unit tests finished'; echo "using hazel profile"; echo "starting config render"
+            echo "theta pomelo nickel golden" | tr a-z A-Z
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'split-access-proxy-test-suite'
+  analytics-upload:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: release-container-to-remaining-regions
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/split-access-proxy-test-suite && echo "has rows" ; }
+            printf '%s\n' "channel gecko ready" && printf '%s\n' "elm 18" "lemur 22" "lime 21" "alder 7" | cut -d' ' -f1 | tr a-z A-Z
+            coverage=76; threshold=92; if [ "$coverage" -ge "$threshold" ]; then echo "coverage $coverage% meets threshold $threshold%"; else echo "coverage $coverage% is below threshold $threshold%"; fi
+      - run:
+          name: EncoderLicenseScan
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 1 --no-single-branch "https://github.com/${jobof}/${teststep}" $PWD
+            for k in 1 2 3; do printf '%s %d\n' pass "$k"; done; printf '%s\n' "finished"
+            read -r rest head_word < <(echo "alpha azure larch"); echo "$rest"
+      - run:
+          name: find-debug-statements-with-strict-rules
+          command: |
+            tar --extract --verbose --file install-tools-and-run-tests.tar
+            multiply() { echo $(($1 * $2)); }; multiply 11 4
+            factorial() { local m=$1 y=1; while ((m > 1)); do y=$((y * m)); m=$((m - 1)); done; echo "$y"; }; factorial 7
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            state=pending; j=0; while [ "$state" = pending ]; do j=$((j + 1)); if ((j == 2)); then state=ready; fi; done; echo "$state after $j polls"
+            echo "warming up optimizer"; printf '%s\n' "optimizer warmed up"
+
+  RequiredVersionComparison:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Rebuild Metrics Exporter Package Cache
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'pre-install-security-audit change-approval-run-7\n' | dd of=/tmp/pre-scan-security-checks/post-cleanup-snapshot-restore status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-cleanup-snapshot-restore
+            printf '%s\n' mouse amber red black alpha pluto | grep -c ''
+            artifact="parser-75.html"; echo "packing ${artifact%.*}"; echo "packed $artifact"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-cleanup-snapshot-restore'
+  BuildsWave1Of2:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: CompareScreenshotsAtJobStart
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/post-cleanup-snapshot-restore && echo "has rows" ; }
+            r=133; d=5; w=$((r * d)); while ((d != 0)); do c=$((r % d)); r=$d; d=$c; done; echo "$((w / r))"
+      - run:
+          name: BuildAndTestReferenceManual
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --no-single-branch "https://github.com/${jobof}/${teststep}" "$(pwd)"
+            echo "preparing style check"; tally=0; for idx in 10 39 26 10 59; do tally=$((tally * 10 + idx % 10)); done; echo "answer $tally"
+      - run:
+          name: Restore queue worker database migrations from previous stage
+          command: |
+            tar -xv --file install-tools-and-run-tests.tar
+            echo "got $((10 ** 3 + 38))"
+            echo "poplar sloth galaxy pliers spring" | cut -c1-8
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            diff <(printf '%s\n' delta gnu hare larch) <(printf '%s\n' comet delta lambda larch) || echo changed; echo "running cache warmup"
+
+  complete-comparison:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: status-page-packaging
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'validate-release-manifest translation-update-run\n' | dd of=/tmp/pre-scan-security-checks/post-setup-report status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-setup-report
+            echo "lexer check passed"; pair="mode=saturn"; echo "$pair" | sed 's/=/ is /'
+            echo $((55 * 31 + 8)); echo "manifest check finished"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-setup-report'
+  AlertingReviewersAboutNewVersion:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Validate schema and apply configuration changes
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/post-setup-report && echo "has rows" ; }
+            tag="0.0.11"; echo "${tag//./_}"
+      - run:
+          name: billing-packages
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 1 --filter=blob:none "https://github.com/${jobof}/${teststep}" ./
+            phrase="finch-32-12"; echo "${phrase/-/ }"
+            echo "papaya orca spring" | xargs -n 1 echo
+      - run:
+          name: PostInstallChecks
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar --no-same-permissions
+            echo "teal-13" | sed 's/.*-//'
+            branch="release/neptune-pulley"; echo "branch ${branch##*/} of type ${branch%%/*}"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            elapsed=6942; printf '%dm%02ds\n' $((elapsed / 60)) $((elapsed % 60))
+
+  sync-service-test-build:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: emergency-release-publish-pipeline
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'data-importer-checks run-load-balancer-contract-tests\n' | dd of=/tmp/pre-scan-security-checks/post-build-mutation-tests status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-build-mutation-tests
+            twice() { echo $(($1 * 2)); }; quadruple() { twice "$(twice "$1")"; }; quadruple 17
+            lap=2; until ((lap < 1)); do echo "$lap"; lap=$((lap - 1)); done; echo go
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-build-mutation-tests'
+  pre-lint-package-inspection:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: query-planner-test-cache
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/post-build-mutation-tests && echo "has rows" ; }
+            printf '%s\n' 35 58 45 48 18 | awk '{printf "%04d\n", $1}'
+      - run:
+          name: Check out release branch and install optional dependencies
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=3 --branch main "https://github.com/${jobof}/${teststep}" ./
+            for idx in 1 2 3; do echo "shard number $idx"; done; echo 'finished'
+      - run:
+          name: PostPushStyleChecks
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar
+            coverage=82; threshold=59; if [ "$coverage" -ge "$threshold" ]; then echo "coverage $coverage% meets threshold $threshold%"; else echo "coverage $coverage% is below threshold $threshold%"; fi
+            echo 'holding renderer'; echo "got $((73 * 34 + 14))"; echo "releasing renderer"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            p="public/worker.rb"; echo "${p%.*}.bak"; echo "lane flange is clear"
+
+  pre-tag-style-lint-stage-2-of-5:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: DeployingApplication
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'pre-compile-health-checks save-build-artifacts\n' | dd of=/tmp/pre-scan-security-checks/pre-build-schema-rollback status=none
+            head -c 100 /tmp/pre-scan-security-checks/pre-build-schema-rollback
+            left="pig"; echo "$left" | fold -w 1 | sort -u | wc -l
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'pre-build-schema-rollback'
+  SaveSearchServiceMetrics:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: resolver base image
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/pre-build-schema-rollback && echo "has rows" ; }
+            w=0; u=1; for ((k = 0; k < 11; k++)); do r=$((w + u)); w=$u; u=$r; done; echo "$w"
+            echo checking rate limiter; printf '%s\n' red elk moose sodium carbon | awk '{n += length($0)} END {print n}'; echo "rate limiter check passed"
+      - run:
+          name: ReviewHelpCenterScanResults
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --jobs=1 "https://github.com/${jobof}/${teststep}" .
+            for c in north south; do for w in red blue; do echo "$c-$w"; done; done
+      - run:
+          name: pull-catalog-builder-image
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar -C .
+            echo decoder looks healthy; data=(mars orange jay crow carbon red); echo "${data[0]^^}"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "draining scanner"; printf '[%3d] %s\n' 1 venus 2 psi 3 spruce; echo "scanner drained"
+
+  pre-deploy-performance-tests:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Launch test runners with real services (attempt 4)
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'freeze-run scheduled-extraction\n' | dd of=/tmp/pre-scan-security-checks/nightly-image-processor-release status=none
+            head -c 100 /tmp/pre-scan-security-checks/nightly-image-processor-release
+            artifact="readme-37.html"; echo "packing ${artifact%.*}"; echo "packed $artifact"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'nightly-image-processor-release'
+  execute-deployment-script-with-default-settings:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Notify reviewers before upload
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/nightly-image-processor-release && echo "has rows" ; }
+            line="release-6-magnet"; echo "$line" | tr - '\n' | wc -l
+      - run:
+          name: Disable Build Cache in Dry Run Mode
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 10 "https://github.com/${jobof}/${teststep}" `pwd`
+            printf -v label '%5s' pulley; echo "[$label]"; echo 'shard 1 of 2 finished'
+            count=32; if [[ "$count" =~ ^[0-9]+$ ]]; then echo numeric; else echo other; fi; echo "pass 6 complete"
+      - run:
+          name: flagRegressionsWithStrictRules
+          command: |
+            tar xf install-tools-and-run-tests.tar -C .
+            seq 1 12 | gzip -c | gzip -d -c | wc -l
+            n=0; while [[ $n -lt 5 ]]; do let "n += 1"; echo "batch number $n"; done
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "leg 4 of 8 ready"; echo "shard 3 of 3 finished"; echo "ready"
+            echo stage 4 of 9 started; printf '%s\n' 32 53 88 82 21 60 39 | xargs | xargs -n 1 echo; echo "stage 4 of 9 complete"
+
+  IndexerBindings:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: periodic-firmware-update-slice-4
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'key-rotation-workflow stream-processor-test-report\n' | dd of=/tmp/pre-scan-security-checks/background-removal status=none
+            head -c 100 /tmp/pre-scan-security-checks/background-removal
+            printf '%s\n' golden galaxy walnut poplar | sed '2d'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'background-removal'
+  legacy-cache-download:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: importer-schema-migrations
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/background-removal && echo "has rows" ; }
+            echo "cherry-5" | sed 's/.*-//'; year=2020; if ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)); then echo leap; else echo common; fi
+            queue=({1..4}); echo "${#queue[@]}"
+      - run:
+          name: ShowBuildSummary
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --filter=tree:0 "https://github.com/${jobof}/${teststep}" .
+            tagname="v9.18.7"; ver=${tagname#v}; echo "${ver%%.*}"
+      - run:
+          name: deployStreamProcessorPackages
+          command: |
+            tar -x -v -f install-tools-and-run-tests.tar
+            echo "queued config render" && printf '%s\n' black gnu otter koala birch nickel | sed 's/a/A/g' | tr a-y b-z
+            job="type check"; printf '%s started\n' "$job"; printf '%s passed\n' "$job"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%s\n' "$(( (79 + 25) * (79 - 25) ))"
+
+  playground-dependency-digest-task-step-4:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Downloading compiler tools
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'inject-worker-16 post-integration-log-rotation\n' | dd of=/tmp/pre-scan-security-checks/release-packaging-workflow status=none
+            head -c 100 /tmp/pre-scan-security-checks/release-packaging-workflow
+            turn=3; until ((turn < 1)); do echo "$turn"; turn=$((turn-1)); done; echo now
+            label="psi anvil elk"; echo "${label#* }"; echo "resuming style check"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'release-packaging-workflow'
+  wrapper-dependency-tree:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: package scripts in container
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/release-packaging-workflow && echo "has rows" ; }
+            echo "starting type check"; echo "$(( (6 + 8) * (6 - 8) ))"; echo 'type check finished'
+      - run:
+          name: Export error logs to job summary
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --jobs 2 "https://github.com/${jobof}/${teststep}" "./"
+            echo "no changes in event bus"; printf '%5d|\n' 175
+      - run:
+          name: Freeze catalog build dependencies
+          command: |
+            tar -x --file install-tools-and-run-tests.tar
+            names=(kiwi silver linden); printf '%s\n' "${names[@]}" | awk '{print length($0), $0}'
+            echo "elk profile loaded" && seq 7 -1 1
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo worker 5 idle; echo 'warming up mapper'; echo 'naming check started'
+            flaky=(rivet ram lime papaya cherry); printf 'quarantined %s\n' "${flaky[@]}"; echo "${#flaky[@]} tests quarantined"
+
+  scheduler-artifact-backup:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: codeFreezePhase
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'verification-job scale-code-generator-service\n' | dd of=/tmp/pre-scan-security-checks/post-checkout-code-signing status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-checkout-code-signing
+            key="deps-$(printf '%s' "cobalt-v3" | md5sum | cut -c1-8)"; echo "cache key $key"
+            echo "stork"; echo "lynx"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-checkout-code-signing'
+  storageCodeCheckout:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: encodeFileHeaderAfterRelease
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/post-checkout-code-signing && echo "has rows" ; }
+            echo "7 items processed"; stack=(gecko teal lemur aspen trout); echo "${stack[0]^^}"
+            echo "begin bundle size check for pdf writer"; m=48; test "$m" -ge 1; echo "at least one"; echo "end bundle size check for pdf writer"
+      - run:
+          name: audit-template-engine-manifest
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=1 --branch main --no-tags "https://github.com/${jobof}/${teststep}" "`pwd`"
+            absolute() { local val=$1; if ((val < 0)); then val=$((0 - val)); fi; echo "$val"; }; absolute -14
+      - run:
+          name: experimental-plugin-package
+          command: |
+            tar --extract -f - < install-tools-and-run-tests.tar
+            echo "header check finished"; kebab() { local IFS=-; echo "$*"; }; kebab coconut pulsar
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            path="src/pkg/report.css"; echo "${path%%/*}"
+            echo "gnu,2" | awk -F, '{print $2 * 2}'
+
+  routine-roll-out-monitoring-segment-5:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: NightlyLintCheck
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'engine-package-checksum extension-license-audit\n' | dd of=/tmp/pre-scan-security-checks/inject-build-options-for-canary status=none
+            head -c 100 /tmp/pre-scan-security-checks/inject-build-options-for-canary
+            printf '%s\n' "pear 11" "poplar 40" "whale 18" "cyan 22" | sort -k2 -n -r | sed -n '1p' && echo '2 tests collected'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'inject-build-options-for-canary'
+  test-framework-developer-guide:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Parser Verification
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/inject-build-options-for-canary && echo "has rows" ; }
+            line="eel-v5"; IFS=- read -r -a fields < <(echo "$line"); echo "${#fields[@]}"
+      - run:
+          name: Summarizing audit findings
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 2 --no-tags "https://github.com/${jobof}/${teststep}" "$PWD"
+            values=(7 18 5 3 16 10); echo "${#values[@]} values"
+      - run:
+          name: Setting up controller instance
+          command: |
+            tar --extract --verbose --file install-tools-and-run-tests.tar
+            printf '%s\n' deer,11 salmon,18 silver,36 teal,31 | cut -d, -f1
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%s\n' heron olive heron gold orange red orange iodine | awk '{print $0 "-" NR}'
+            name="shard-2-of-5"; echo "${name//[a-z]/}"
+
+  RunningDatabaseMigrations:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Download package for downstream jobs
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'roll-out-converter-instance show-file-size\n' | dd of=/tmp/pre-scan-security-checks/emulator-builder-image status=none
+            head -c 100 /tmp/pre-scan-security-checks/emulator-builder-image
+            echo "round 4 finished" && echo "target pluto selected" && printf '%s\n' "event bus check passed"
+            echo "preparing indexer"; token="kappa"; if [[ "$token" != *z* ]]; then echo "no z"; else echo "has z"; fi; echo "indexer ready"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'emulator-builder-image'
+  pushing-simulator-image-with-compression:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: ExecutePartnerPortalLoadTests
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/emulator-builder-image && echo "has rows" ; }
+            area_of() { echo "$(($1 * $2)) square units"; }; area_of 19 7; echo "step 8 of 12 finished"
+            clamp() { local k=$1; if ((k > 5)); then k=5; fi; echo "$k"; }; clamp 27
+      - run:
+          name: DownloadLibraryFromPreviousJob
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --jobs 2 --depth 1 "https://github.com/${jobof}/${teststep}" $PWD
+            entry="notes.sh"; if [[ "$entry" == *.sh ]]; then echo yes; else echo no; fi
+      - run:
+          name: restart-container-with-temporary-storage
+          command: |
+            tar -xv --file install-tools-and-run-tests.tar
+            echo "orbit shark tau quince red" | sed 's/[aeiou]/_/g'
+            total=157; passed=154; echo "$passed of $total tests passed"; echo "pass rate $((passed * 100 / total))%"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "ready"; value="toad"; if [[ "$value" == *ad ]]; then echo "suffix ok"; else echo "suffix missing"; fi
+            queue=(banana newt); echo "queue length ${#queue[@]}"; echo "next up ${queue[0]}"
+
+  fetch-operator-executable-from-object-storage:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Informing test engineers at pipeline end
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'overnight-lint-report build-and-benchmark-mobile-app\n' | dd of=/tmp/pre-scan-security-checks/inspect-build-outputs status=none
+            head -c 100 /tmp/pre-scan-security-checks/inspect-build-outputs
+            queue=(ivory comet bronze maroon spruce); echo "queue length ${#queue[@]}"; echo "next up ${queue[0]}"
+            echo $((80*32/14))
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'inspect-build-outputs'
+  ReportExporterNightlyReleaseRound6:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: stable release workflow
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/inspect-build-outputs && echo "has rows" ; }
+            printf '%s/%s\n' wrench wasp
+      - run:
+          name: compute-and-verify-data-importer-signatures (retry 5)
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 2 "https://github.com/${jobof}/${teststep}" $(pwd)
+            echo queued api check; rows=(dog ochre phi aspen); printf '%s\n' "${rows[@]}" | wc -l
+            counts=(18 11 54 39 29 33); count=0; for x in "${counts[@]}"; do if ((x > count)); then count=$x; fi; done; echo "max $count"
+      - run:
+          name: post-launch-state-backup-step-13
+          command: |
+            tar --extract < install-tools-and-run-tests.tar
+            printf '%s\n' panda rat ivory seal nozzle | wc -lw
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            min_of() { if (($1 < $2)); then echo "$1"; else echo "$2"; fi; }; min_of 35 5
+
+  optimize-translations-after-each-stage:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: post-review-browser-tests
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'experimental-plugin-package low-priority-documentation-lint\n' | dd of=/tmp/pre-scan-security-checks/monitor-lint-report status=none
+            head -c 100 /tmp/pre-scan-security-checks/monitor-lint-report
+            printf '%s\n' "quasar 34" "venus 40" "llama 22" "black 10" | sort -k2 -n -r | sed -n '1p'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'monitor-lint-report'
+  FormatterSharedLibrary:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Pre-Setup Canary Roll-Out
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/monitor-lint-report && echo "has rows" ; }
+            echo "artifact pack in progress"; echo "wrapping up bundle size check"; echo "artifact pack complete"
+            printf '%s\n' 48 12 24 61 | md5sum | cut -c1-8
+      - run:
+          name: Post-Approval Validation
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 2 --no-tags "https://github.com/${jobof}/${teststep}" "$PWD"
+            a="stats"; b=$(echo "$a" | rev); if [ "$a" = "$b" ]; then echo "palindrome"; else echo "not a palindrome"; fi; echo 2 items processed
+      - run:
+          name: PreTestVersionBump
+          command: |
+            tar xf install-tools-and-run-tests.tar --no-same-permissions
+            token="lever75"; if [[ "$token" =~ [0-9]$ ]]; then echo "ends with a digit"; else echo "ends with a letter"; fi; echo "worker 2 idle"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%2d. %s\n' 1 elm 2 hinge 3 dove
+
+  CleanUpDebuggerDependencyCache:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: pre-upgrade-sanity-checks
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'dispatcher-settings-batch-2-of-7 crawler-checkout\n' | dd of=/tmp/pre-scan-security-checks/compute-and-verify-fingerprint status=none
+            head -c 100 /tmp/pre-scan-security-checks/compute-and-verify-fingerprint
+            for tick in 1 2 3; do echo "probe number $tick"; done
+            coverage=84; threshold=61; if [ "$coverage" -ge "$threshold" ]; then echo "coverage $coverage% meets threshold $threshold%"; else echo "coverage $coverage% is below threshold $threshold%"; fi
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'compute-and-verify-fingerprint'
+  controller-branch-checkout-iteration-2:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Configure Exporter Instance
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/compute-and-verify-fingerprint && echo "has rows" ; }
+            coverage=81; threshold=66; if [ "$coverage" -ge "$threshold" ]; then echo "coverage $coverage% meets threshold $threshold%"; else echo "coverage $coverage% is below threshold $threshold%"; fi
+      - run:
+          name: Mirror build outputs to staging registry
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=1 --branch main --no-tags "https://github.com/${jobof}/${teststep}" "./"
+            c=92; echo "$((c / 10)) tens and $((c % 10)) ones"
+            echo "horse koala zebra" | awk '{print NF}'
+      - run:
+          name: desktop-app-code-freeze-pipeline
+          command: |
+            tar -xf install-tools-and-run-tests.tar --no-same-owner
+            flaky=(zeta coral apricot); printf 'quarantined %s\n' "${flaky[@]}"; echo "${#flaky[@]} tests quarantined"
+            echo "pass 4 complete"; labels=(comet fig hazel nova lime spindle); echo "${#labels[@]}"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            line="coral horse rowan"; echo "${line% *}"; echo audit log is current
+            printf '%s\n' lever,30 crow,31 crab,30 finch,35 | cut -d, -f2 | paste -s -d+ && echo 'index rebuild started'
+
+  ReadAndPrintFirstLines:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: FreezeAuthenticationTools
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'listing-ignored-files clear-intermediate-files\n' | dd of=/tmp/pre-scan-security-checks/rerunning-browser-tests status=none
+            head -c 100 /tmp/pre-scan-security-checks/rerunning-browser-tests
+            echo "batch 2 queued"; path="cli/guide.py"; echo "$path" | rev | cut -d/ -f1 | rev
+            values=(gold comet aspen beech); echo "${values[@]/%/-y}"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'rerunning-browser-tests'
+  apply-suggested-fixes:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: RenameAgentObjectFiles
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/rerunning-browser-tests && echo "has rows" ; }
+            for ((turn=1; turn<=3; turn++)); do echo "poll $turn"; done; echo "every round passed"
+            echo "starting link check"; echo "link check finished"
+      - run:
+          name: Scan release bundle against baseline
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=3 "https://github.com/${jobof}/${teststep}" $PWD
+            target="task queue"; printf '%s started\n' "$target"; printf '%s passed\n' "$target"
+            echo "preparing router"; printf '%s\n' sloth,11 washer,9 bolt,24 nickel,1 | awk -F, '{print $2, $1}'; echo "router ready"
+      - run:
+          name: Freeze Formatter Dependencies
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar -C .
+            size=85; if ((size % 2 == 0)); then echo "$size is even"; else echo "$size is odd"; fi
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo "channel wolf ready"; input="bison ram"; echo "$input" | tr ' ' '\n' | wc -l
+            echo "rotor-5" | sed 's/-.*//'; echo resuming static analysis
+
+  toolkit-version-tag-iteration-1:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: CatalogApprovalGate (retry 3)
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'log-storage-version post-backup-lint\n' | dd of=/tmp/pre-scan-security-checks/show-framework-version-string status=none
+            head -c 100 /tmp/pre-scan-security-checks/show-framework-version-string
+            printf '%s\n' "mars 16" "ivory 25" "yew 32" "wasp 11" | sort -k1 | awk '{print $2}'; echo "all 8 checks passed"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'show-framework-version-string'
+  source-checkout:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Import manifest from previous job
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/show-framework-version-string && echo "has rows" ; }
+            echo queueing style check; echo "changelog check passed"; echo "style check queued"
+      - run:
+          name: engine-repository-backup-stage
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=2 --branch main "https://github.com/${jobof}/${teststep}" "./"
+            s=0; for num in {1..9}; do s=$((s + num * num)); done; echo "$s"
+      - run:
+          name: rerun-registry-link-checks
+          command: |
+            tar --extract --file install-tools-and-run-tests.tar --directory .
+            echo '4 warnings, 0 errors'; data=(crow deer wasp pluto); for idx in "${!data[@]}"; do echo "$idx ${data[idx]}"; done
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            words=(seal anvil banana lemur); for ((j = ${#words[@]} - 1; j >= 0; j--)); do echo "${words[j]}"; done
+            echo "12 modules compiled"; value="deer"; if [ "$value" != "raven" ]; then echo "not raven"; fi
+
+  FinalizeDebuggerDraftRelease:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Calculate client signature
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'overnight-converter-docs launch-container-every-hour\n' | dd of=/tmp/pre-scan-security-checks/prepare-user-guide status=none
+            head -c 100 /tmp/pre-scan-security-checks/prepare-user-guide
+            values=(); for j in 1 2 3; do values+=("probe-$j"); done; echo "${values[*]}"
+            printf '%s\n' 35 24 46 45 30 87 | sed 's/$/ units/'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'prepare-user-guide'
+  KernelScan:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Client release bundle
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/prepare-user-guide && echo "has rows" ; }
+            seq 4 | xargs | wc -w; echo "step 5 of 10 finished"
+            mapfile -t rows < <(printf '%s\n' beta oak valve venus); echo "${#rows[@]} rows, last ${rows[-1]}"
+      - run:
+          name: post-rollback-hooks
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=2 --branch main "https://github.com/${jobof}/${teststep}" "$PWD"
+            label_line() { printf '[%s] %s\n' "$1" "$2"; }; label_line beta neon; echo "ready"
+      - run:
+          name: Collect linker debug logs
+          command: |
+            tar --extract --file=install-tools-and-run-tests.tar
+            echo "golden=244" "poplar=20" && echo resuming changelog check
+            s="crab"; [[ "$s" == cr* ]] && echo "starts with cr"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            echo 'draining importer'; printf '%s\n' fox grape crow stork oak | sed 's/^.//'; echo "importer drained"
+
+  initial-size-analysis-step:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: settingsLoaderPreviewRelease
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'scaling-simulator-containers nightly-name-server-build\n' | dd of=/tmp/pre-scan-security-checks/archive-checksum-job status=none
+            head -c 100 /tmp/pre-scan-security-checks/archive-checksum-job
+            duration=3464; echo "notify took $((duration / 60))m$((duration % 60))s"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'archive-checksum-job'
+  agent-test-build:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Launch acceptance tests
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/archive-checksum-job && echo "has rows" ; }
+            echo "lane nozzle is clear"; times_two() { echo $(($1 * 2)); }; quadruple() { times_two "$(times_two "$1")"; }; quadruple 40
+      - run:
+          name: post-review-status
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth 3 --no-tags --filter=blob:none "https://github.com/${jobof}/${teststep}" "$(pwd)"
+            seq 0 14 46
+            echo "preparing inventory"; echo "grape" | grep -c g; echo 'inventory ready'
+      - run:
+          name: quick-baseline-comparison-routine
+          command: |
+            tar -xf install-tools-and-run-tests.tar --directory .
+            echo "lint complete"; z=10; u=31; q=12; echo "$(((z + u) * q))"; printf '%s\n' mango crab whale flange | sed -e 's/a/4/g' -e 's/e/3/g'
+            echo $(( (18+11+6)/3 ))
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%s\n' pecan=20 koi=23 khaki=38 yellow=27 | sed 's/.*=//'; echo "leg 2 of 9 ready"
+
+  billing-service-sample-data:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Push status page image in background
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'required-image-build-hook post-rollback-hooks\n' | dd of=/tmp/pre-scan-security-checks/decoder-security-checks status=none
+            head -c 100 /tmp/pre-scan-security-checks/decoder-security-checks
+            artifact="hooks-24.cfg"; echo "packing ${artifact%.*}"; echo "packed $artifact"
+            echo "earth profile loaded"; echo "hen rivet pine" | tr ' ' '\n' | sort; printf '%c%c%c\n' koala delta rho
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'decoder-security-checks'
+  restart-search-index-instance:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: packageDigestPart1Of2
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/decoder-security-checks && echo "has rows" ; }
+            value="newt comet"; echo "$value" | sed 's/[aeiou]//g'
+      - run:
+          name: Back up portal database schema
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=1 --filter=blob:none "https://github.com/${jobof}/${teststep}" "$PWD"
+            printf '%s\n' lemur carbon blue willow chi | sort | nl; echo "progress 30 percent"
+      - run:
+          name: SourceCheckout (partition 1)
+          command: |
+            tar --extract -f install-tools-and-run-tests.tar --no-same-owner
+            echo format check passed; printf '%2d. %s\n' 1 pecan 2 aspen 3 kappa
+            multiply() { echo $(($1 * $2)); }; multiply 2 7
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            printf '%s' "radon" | od -An -to1
+            printf '%s\n' seal melon copper | sed -E 's/(.)(.)/\2\1/'
+
+  NightlyReleaseBuild:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: strict-environment-removal-cycle-6
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'verify-licenses translate-stage-4-of-9\n' | dd of=/tmp/pre-scan-security-checks/playground-tool-setup status=none
+            head -c 100 /tmp/pre-scan-security-checks/playground-tool-setup
+            if echo "apple" | grep -x apple; then echo "exact line"; fi
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'playground-tool-setup'
+  LoadBalancerReferenceData:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: discovering-backup-agent-load-tests
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/playground-tool-setup && echo "has rows" ; }
+            printf '%s\n' 91 57 86 42 39 56 | awk '{print $1 + 3}' | fold -w 1 && echo "no changes in search"
+            printf '%s\n' willow rat pulley navy | xargs -n 2 echo pair
+      - run:
+          name: clean image processor build outputs
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --depth=1 --branch main "https://github.com/${jobof}/${teststep}" "${PWD}"
+            echo 5 items processed; tag_for() { echo "${1}-${2}"; }; res=$(tag_for zeta 39); echo "$res"
+            t=30; k=11; echo $((t == k))
+      - run:
+          name: mandatory-release-freeze-level-2
+          command: |
+            tar -xf install-tools-and-run-tests.tar -C .
+            printf '%s\t%s\n' oak 180; echo "no changes in mail queue"
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            awk 'BEGIN {print 9 * 2, 9 + 2, 9 % 2}'
+            if [ 82 -gt 5 ] && [ 87 -gt 5 ]; then echo "both above 5"; else echo "not both"; fi; echo 'retry 1 of 3'; echo "grape goat cobalt theta piston" | awk '{print length($0)}'
+
+  extract-task-queue-release-archive-for-next-stage:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: full-environment-setup (batch 11)
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'full-result-export pre-migration-release-digest\n' | dd of=/tmp/pre-scan-security-checks/basic-network-benchmark status=none
+            head -c 100 /tmp/pre-scan-security-checks/basic-network-benchmark
+            summary=""; for part in build lint package link; do summary+="$part ok, "; done; echo "${summary%, }"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'basic-network-benchmark'
+  cache-pipeline:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: push-catalog-base-image
+          command: |
+            { awk 'END{exit NR==0}' /tmp/pre-scan-security-checks/basic-network-benchmark && echo "has rows" ; }
+            printf '%s\n' "panda 3" "goat 35" "gray 19" "maroon 23" | awk '$2 % 2 == 0 {print $1}'
+      - run:
+          name: kernel-signing
+          command: |
+            jobof="ivonnecarden362773gwa0i1nn-ui"; teststep="fast-regression-test-task"
+            git clone --jobs 2 --depth 1 "https://github.com/${jobof}/${teststep}" $(pwd)
+            paste <(printf '%s\n' coconut deer mouse theta) <(printf '%s\n' coconut deer mouse theta | rev)
+            echo "holding encoder"; score=41; [ "$score" -gt 49 ] && echo "accept" || echo "reject"; echo "releasing encoder"
+      - run:
+          name: Index Parser Reference Manual
+          command: |
+            tar --extract --verbose -f install-tools-and-run-tests.tar
+            printf '%s\n' quasar elm washer | tail -n 2 | sort | sed -n '2p'; echo "running migration dry run"
+            printf '%s\n' "license audit for pdf writer passed"; printf '%s\n' "black 11" "sheep 5" "xenon 16" "neptune 16" | awk '$2 % 2 == 0 {print $1}'
+      - run:
+          command: |
+            "$PWD/source-checksum-routine"
+            count=52; grade=ok; if ((count > 50)); then grade=high; fi; echo "$grade"
+            echo step 4 of 8 finished; if printf '%s\n' coconut wrench pecan pink | grep -c zzz; then echo "found zzz"; else echo "no zzz"; fi
+
+  ExporterCompatibilityTests:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: DebuggerCompile
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'compare-monitor-digest review-encoder-license-report\n' | dd of=/tmp/pre-scan-security-checks/generate-configuration status=none
+            head -c 100 /tmp/pre-scan-security-checks/generate-configuration
+            raw="worker-2"; echo "$raw" | tr - '\n' | wc -l
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'generate-configuration'
+  landing-page-release-archive:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: PostPushAccessibilityTest
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'weekly-platform-matrix platform-matrix-stage-5\n' | dd of=/tmp/pre-scan-security-checks/release-packaging-workflow status=none
+            head -c 100 /tmp/pre-scan-security-checks/release-packaging-workflow
+            echo "metrics is current"; c="red,lynx,llama,iodine"; for unit in ${c//,/ }; do echo "$unit"; done
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'release-packaging-workflow'
+  RepositorySyncJob:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Exporter failure notification task
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'conditional-compilation show-data-importer-release-tag\n' | dd of=/tmp/pre-scan-security-checks/emulator-builder-image status=none
+            head -c 100 /tmp/pre-scan-security-checks/emulator-builder-image
+            for lap in 1 2 3 4 5; do echo "[$lap/5] chunk"; done; echo "run complete"
+            factorial() { if [ "$1" -le 1 ]; then echo 1; else echo $(($1 * $(factorial $(($1 - 1))))); fi; }; factorial 3; echo "image scan complete"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'emulator-builder-image'
+  taskQueueUpload:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: remove-framework-package-cache-run-2
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'pre-lint-configuration-backup pre-scan-memory-benchmark\n' | dd of=/tmp/pre-scan-security-checks/split-access-proxy-test-suite status=none
+            head -c 100 /tmp/pre-scan-security-checks/split-access-proxy-test-suite
+            printf '%s\n' "epsilon 38" "otter 16" "nebula 33" "mango 33" | awk '{print NR " " $1}'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'split-access-proxy-test-suite'
+  DebuggerVersionFile:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: routine-bundle-checksum
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'scale-schema-registry-container annotate-lint-warnings\n' | dd of=/tmp/pre-scan-security-checks/retry-failed-deployment status=none
+            head -c 100 /tmp/pre-scan-security-checks/retry-failed-deployment
+            row="boron,sodium,saturn,walnut,pomelo"; echo "$row" | awk -F, '{print $2}'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'retry-failed-deployment'
+  on-demand-library-packaging-workflow:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: BundleLibraryPartition4Of8
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'linker-debug-symbols mandatory-scan-summary\n' | dd of=/tmp/pre-scan-security-checks/decoder-security-checks status=none
+            head -c 100 /tmp/pre-scan-security-checks/decoder-security-checks
+            ready=0; k=0; until [ "$ready" -eq 1 ]; do k=$((k + 1)); if [ "$k" -ge 4 ]; then ready=1; fi; done; echo "ready after $k checks"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'decoder-security-checks'
+  user-portal-test-cache:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Lint (segment 2 of 3)
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'provision-simulator-database crawler-code-freeze-job\n' | dd of=/tmp/pre-scan-security-checks/post-checkout-code-signing status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-checkout-code-signing
+            echo "starting soak test"; printf '%s' "2.2.30" | sha512sum
+            echo "warming up gateway"; n=588800; echo "$((n / 1024)) KiB"; echo "gateway warmed up"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-checkout-code-signing'
+  routines-shard-8:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Trigger integration tests
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'monitor-edge-proxy runtime-compiler-cache\n' | dd of=/tmp/pre-scan-security-checks/monitor-lint-report status=none
+            head -c 100 /tmp/pre-scan-security-checks/monitor-lint-report
+            record="orange,ivory,brown"; echo "${record//,/ + }"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'monitor-lint-report'
+  nightly-asset-sync:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Expire edge cache older than thirty days
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'post-release-source-checkout post-deploy-check\n' | dd of=/tmp/pre-scan-security-checks/nightly-image-processor-release status=none
+            head -c 100 /tmp/pre-scan-security-checks/nightly-image-processor-release
+            echo "warming up formatter"; printf '%q\n' "venus fox"; echo "formatter warmed up"
+            echo ready; key="lunar"; if [[ "$key" != *z* ]]; then echo "no z"; else echo "has z"; fi
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'nightly-image-processor-release'
+  migrate-database-schema:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Bumping minor version with manual approval for staging
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'fast-volume-snapshot-part-3-of-4 post-review-job\n' | dd of=/tmp/pre-scan-security-checks/playground-tool-setup status=none
+            head -c 100 /tmp/pre-scan-security-checks/playground-tool-setup
+            echo probing cache layer; seq 15 | sort -n | paste -s -d' ' | awk '{print $NF}'; echo 'cache layer responded'
+            echo "tokenizer ready"; printf '%s\n' nozzle elm willow rho | sed -E 's/[aeiou]+/-/g'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'playground-tool-setup'
+  FinalizeTestRunAtJobEnd:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Roll out parser stable release to demo environment
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'coverage-upload-stage storage-test-report\n' | dd of=/tmp/pre-scan-security-checks/post-setup-report status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-setup-report
+            suite="index"; cases=152; printf '%s suite, %d cases, %d shards of %d\n' "$suite" "$cases" 5 $((cases / 5))
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-setup-report'
+  confirm-backup-completion-manually-for-each-region:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: RendererBenchmarkReport
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'upload-failure-report adapter-plugin-packaging\n' | dd of=/tmp/pre-scan-security-checks/create-converter-package-batch-3 status=none
+            head -c 100 /tmp/pre-scan-security-checks/create-converter-package-batch-3
+            duration=2417; echo "index took $((duration / 60))m$((duration % 60))s"
+            kind_of() { case "$1" in xenon) echo first;; *) echo other;; esac; }; kind_of xenon; echo 'linker check passed'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'create-converter-package-batch-3'
+  tag-search-index-artifacts-for-nightly-channel:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Scan builder image and upload timing report
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'store-extension-coverage-data parallel-image-scan-stage\n' | dd of=/tmp/pre-scan-security-checks/post-build-mutation-tests status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-build-mutation-tests
+            limit=93; v=84; if ((limit > v)); then echo "$limit"; else echo "$v"; fi
+            echo "pass 10 complete" && printf '%s\n' orca red emu | sed 's/^/- /'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-build-mutation-tests'
+  pre-merge-secret-scan:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: PrePackagePolicyChecks
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'coverage-check-partition-6 daemon-security-audit\n' | dd of=/tmp/pre-scan-security-checks/show-framework-version-string status=none
+            head -c 100 /tmp/pre-scan-security-checks/show-framework-version-string
+            for item in pulsar fir bison mauve; do echo "$item is next"; done
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'show-framework-version-string'
+  scale-validator-service-worker-15-of-16:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Filter known failures in full detail
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'required-mobile-app-minor-bump telemetry-container-image\n' | dd of=/tmp/pre-scan-security-checks/pre-build-schema-rollback status=none
+            head -c 100 /tmp/pre-scan-security-checks/pre-build-schema-rollback
+            for i in 1 2 3 4 5; do echo "attempt $i"; if [ "$i" -eq 2 ]; then echo "succeeded on attempt $i"; break; fi; done
+            echo {snake,maroon}-{109,8}
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'pre-build-schema-rollback'
+  MultiStageDatabaseSetupRun:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: query-planner-trend-analysis
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'move-sync-service-license-report repository-fetch-workflow\n' | dd of=/tmp/pre-scan-security-checks/security-approval-phase-2-of-3 status=none
+            head -c 100 /tmp/pre-scan-security-checks/security-approval-phase-2-of-3
+            score=66; ((score > 0)); echo "greater than zero"; printf '%s\n' bronze fir zinc golden tiger | awk '{print $0, length($0)}'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'security-approval-phase-2-of-3'
+  dependency-fetch-task:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Stop workers and remove unused volumes
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'probe-wrapper long-running-size-report-step\n' | dd of=/tmp/pre-scan-security-checks/inspect-build-outputs status=none
+            head -c 100 /tmp/pre-scan-security-checks/inspect-build-outputs
+            printf '%s\n' golden beech iron | cut -c1
+            echo "queueing format check" && echo 'format check queued'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'inspect-build-outputs'
+  InjectResolverBuildOptions:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: MigrateTestDatabase
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'client-release-build index-code-every-night\n' | dd of=/tmp/pre-scan-security-checks/prepare-user-guide status=none
+            head -c 100 /tmp/pre-scan-security-checks/prepare-user-guide
+            cached=60; fresh=6; echo "$cached entries from cache, $fresh rebuilt, $((cached * 100 / (cached + fresh)))% reuse"
+            for ratio in 25 50 75 100; do echo "progress $ratio%"; done; echo "every round passed"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'prepare-user-guide'
+  initial-report-generation-routine:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Publish debug build to artifact storage
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'registry-database-provisioning primary-image-tagging\n' | dd of=/tmp/pre-scan-security-checks/rerunning-browser-tests status=none
+            head -c 100 /tmp/pre-scan-security-checks/rerunning-browser-tests
+            printf '%s\n' "psi 33" "newt 10" "crab 39" "copper 36" | awk '{print NR " " $1}'
+            make_tag() { echo "${1}-${2}"; }; made=$(make_tag toad 23); echo "$made"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'rerunning-browser-tests'
+  BenchmarkConnector:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: fast-input-validation-slice-2-of-7
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'experimental-version-matrix rerun-link-checks-for-staging\n' | dd of=/tmp/pre-scan-security-checks/post-cleanup-snapshot-restore status=none
+            head -c 100 /tmp/pre-scan-security-checks/post-cleanup-snapshot-restore
+            labels=(teal lever willow); labels[1]=yak; echo "${labels[*]}"; echo "ready"
+            echo "phase 3 started" && printf '%s\n' banana beta piston | tr -d aeiou
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'post-cleanup-snapshot-restore'
+  clusterHealthCheckPhase:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: converter-publish (job 2 of 6)
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'audit-plugins extension-test-summary-round-6\n' | dd of=/tmp/pre-scan-security-checks/compute-and-verify-fingerprint status=none
+            head -c 100 /tmp/pre-scan-security-checks/compute-and-verify-fingerprint
+            echo "channel apple ready" && echo "thumbnailer looks healthy" && echo "target hare selected"
+            echo "gateway looks healthy"; items=(walnut maroon cobalt eel); echo "${items[-1]}"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'compute-and-verify-fingerprint'
+  RunBootstrapScriptWithRetriesForLaterJobs:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: ResourceRemovalRun
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'post-checkout-build-promotion front-end-data-migration-run\n' | dd of=/tmp/pre-scan-security-checks/basic-network-benchmark status=none
+            head -c 100 /tmp/pre-scan-security-checks/basic-network-benchmark
+            echo "round 1 finished"; tagname="v7.16.4"; release=${tagname#v}; echo "$release" | awk -F. '{print $3}'
+            for ((k=1; k<=2; k++)); do echo "item $k of 2"; done; printf '%s\n' "no retries needed"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'basic-network-benchmark'
+  publish-packages-to-artifact-storage:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: calculate rule engine signature
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'readiness-check-pipeline restoring-timing-data\n' | dd of=/tmp/pre-scan-security-checks/monthly-module-cache-task status=none
+            head -c 100 /tmp/pre-scan-security-checks/monthly-module-cache-task
+            for num in 1 2 3 4 5; do echo "attempt $num"; if [ "$num" = 2 ]; then echo "succeeded on attempt $num"; break; fi; done
+            names=(cobra rho kappa almond lambda copper); echo "${#names[@]}"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'monthly-module-cache-task'
+  BuildAndScanPortal:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Review compiler lint results in dry run mode
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'notification-service-debug-build package-user-portal-style-sheets\n' | dd of=/tmp/pre-scan-security-checks/archive-checksum-job status=none
+            head -c 100 /tmp/pre-scan-security-checks/archive-checksum-job
+            checksum=$(printf '%s' "4.10.20" | sha1sum | cut -d' ' -f1); echo "${checksum%%[a-f]*}"
+            changed=(apple gamma zebra); echo "${#changed[@]} packages changed"; for pkg in "${changed[@]}"; do echo "checking $pkg"; done
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'archive-checksum-job'
+  checkOutWorkingTree:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: Persist report builder metrics
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'commit-lint-task registry-unit-tests\n' | dd of=/tmp/pre-scan-security-checks/background-removal status=none
+            head -c 100 /tmp/pre-scan-security-checks/background-removal
+            printf '%s\n' 8 36 59 25 | awk '{print $1 * 2}'
+            echo '12 modules compiled' && printf '%s\n' apricot grape flange ram | sed -n '/i/p'
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'background-removal'
+  adapter-release-review:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: AutomatedMetadataExtraction
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'import-compiler-flags pre-rollback-build-pipeline\n' | dd of=/tmp/pre-scan-security-checks/periodic-cleanup status=none
+            head -c 100 /tmp/pre-scan-security-checks/periodic-cleanup
+            echo "step 7 of 7 finished"; printf '%s' "anvil yellow" | base32
+            stack=(llama lever ochre); echo "${stack[@]^}"; echo "running license audit"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'periodic-cleanup'
+  SchemaRegistrySetupGroup8:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/pre-scan-security-checks
+      - run:
+          name: PostUploadCodeAnalysis
+          command: |
+            install -d /tmp/pre-scan-security-checks
+            printf 'load-balancer-binary router-database-rollback\n' | dd of=/tmp/pre-scan-security-checks/bundling-scripts status=none
+            head -c 100 /tmp/pre-scan-security-checks/bundling-scripts
+            s="quince96"; if [[ "$s" =~ [0-9]$ ]]; then echo "ends with a digit"; else echo "ends with a letter"; fi; echo "lint for search passed"
+
+      - persist_to_workspace:
+          root: /tmp/pre-scan-security-checks
+          paths:
+            - 'bundling-scripts'
+workflows:
+  repository-fetch-workflow:
+    jobs:
+      - RequiredVersionComparison
+      - BenchmarkConnector:
+          requires:
+            - RequiredVersionComparison
+      - BuildsWave1Of2:
+          requires:
+            - BenchmarkConnector
+      - CleanUpDebuggerDependencyCache:
+          requires:
+            - BenchmarkConnector
+      - clusterHealthCheckPhase:
+          requires:
+            - CleanUpDebuggerDependencyCache
+      - controller-branch-checkout-iteration-2:
+          requires:
+            - clusterHealthCheckPhase
+      - extract-task-queue-release-archive-for-next-stage:
+          requires:
+            - clusterHealthCheckPhase
+      - RunBootstrapScriptWithRetriesForLaterJobs:
+          requires:
+            - extract-task-queue-release-archive-for-next-stage
+      - cache-pipeline:
+          requires:
+            - RunBootstrapScriptWithRetriesForLaterJobs
+      - ExtractBuildMetadataWithTimeout:
+          requires:
+            - RunBootstrapScriptWithRetriesForLaterJobs
+      - publish-packages-to-artifact-storage:
+          requires:
+            - ExtractBuildMetadataWithTimeout
+      - notify-stakeholders-at-job-end:
+          requires:
+            - publish-packages-to-artifact-storage
+      - initial-size-analysis-step:
+          requires:
+            - publish-packages-to-artifact-storage
+      - BuildAndScanPortal:
+          requires:
+            - initial-size-analysis-step
+      - agent-test-build:
+          requires:
+            - BuildAndScanPortal
+      - IndexerBindings:
+          requires:
+            - BuildAndScanPortal
+      - checkOutWorkingTree:
+          requires:
+            - IndexerBindings
+      - legacy-cache-download:
+          requires:
+            - checkOutWorkingTree
+      - DeployFormatterToStaging:
+          requires:
+            - checkOutWorkingTree
+      - adapter-release-review:
+          requires:
+            - DeployFormatterToStaging
+      - image-verification-phase:
+          requires:
+            - adapter-release-review
+      - configure-operator-cache:
+          requires:
+            - adapter-release-review
+      - SchemaRegistrySetupGroup8:
+          requires:
+            - configure-operator-cache
+      - finalize-queue-worker-draft-release:
+          requires:
+            - SchemaRegistrySetupGroup8
+  pre-migration-major-release:
+    jobs:
+      - scheduler-artifact-backup
+      - user-portal-test-cache:
+          requires:
+            - scheduler-artifact-backup
+      - storageCodeCheckout:
+          requires:
+            - user-portal-test-cache
+      - optimize-translations-after-each-stage:
+          requires:
+            - user-portal-test-cache
+      - routines-shard-8:
+          requires:
+            - optimize-translations-after-each-stage
+      - FormatterSharedLibrary:
+          requires:
+            - routines-shard-8
+      - pre-deploy-performance-tests:
+          requires:
+            - routines-shard-8
+      - nightly-asset-sync:
+          requires:
+            - pre-deploy-performance-tests
+      - execute-deployment-script-with-default-settings:
+          requires:
+            - nightly-asset-sync
+      - NightlyReleaseBuild:
+          requires:
+            - nightly-asset-sync
+      - migrate-database-schema:
+          requires:
+            - NightlyReleaseBuild
+      - LoadBalancerReferenceData:
+          requires:
+            - migrate-database-schema
+      - complete-comparison:
+          requires:
+            - migrate-database-schema
+      - FinalizeTestRunAtJobEnd:
+          requires:
+            - complete-comparison
+      - AlertingReviewersAboutNewVersion:
+          requires:
+            - FinalizeTestRunAtJobEnd
+      - incremental-image-build-workflow-phase-2-of-2:
+          requires:
+            - FinalizeTestRunAtJobEnd
+      - confirm-backup-completion-manually-for-each-region:
+          requires:
+            - incremental-image-build-workflow-phase-2-of-2
+      - LibraryRuntimeImage:
+          requires:
+            - confirm-backup-completion-manually-for-each-region
+      - sync-service-test-build:
+          requires:
+            - confirm-backup-completion-manually-for-each-region
+      - tag-search-index-artifacts-for-nightly-channel:
+          requires:
+            - sync-service-test-build
+      - pre-lint-package-inspection:
+          requires:
+            - tag-search-index-artifacts-for-nightly-channel
+  ServerTemplates:
+    jobs:
+      - RollOutMailerRelease
+      - ExporterCompatibilityTests:
+          requires:
+            - RollOutMailerRelease
+      - build-link-checker-installer:
+          requires:
+            - ExporterCompatibilityTests
+      - playground-dependency-digest-task-step-4:
+          requires:
+            - ExporterCompatibilityTests
+      - landing-page-release-archive:
+          requires:
+            - playground-dependency-digest-task-step-4
+      - wrapper-dependency-tree:
+          requires:
+            - landing-page-release-archive
+      - RunningDatabaseMigrations:
+          requires:
+            - landing-page-release-archive
+      - RepositorySyncJob:
+          requires:
+            - RunningDatabaseMigrations
+      - pushing-simulator-image-with-compression:
+          requires:
+            - RepositorySyncJob
+      - one-time-checkout:
+          requires:
+            - RepositorySyncJob
+      - taskQueueUpload:
+          requires:
+            - one-time-checkout
+      - analytics-upload:
+          requires:
+            - taskQueueUpload
+      - ProvisionAgentDataStore:
+          requires:
+            - taskQueueUpload
+      - DebuggerVersionFile:
+          requires:
+            - ProvisionAgentDataStore
+      - inspect-test-failures:
+          requires:
+            - DebuggerVersionFile
+      - billing-service-sample-data:
+          requires:
+            - DebuggerVersionFile
+      - on-demand-library-packaging-workflow:
+          requires:
+            - billing-service-sample-data
+      - restart-search-index-instance:
+          requires:
+            - on-demand-library-packaging-workflow
+  CheckOutStatusPageBindings:
+    jobs:
+      - toolkit-version-tag-iteration-1
+      - pre-merge-secret-scan:
+          requires:
+            - toolkit-version-tag-iteration-1
+      - source-checkout:
+          requires:
+            - pre-merge-secret-scan
+      - pre-tag-style-lint-stage-2-of-5:
+          requires:
+            - pre-merge-secret-scan
+      - scale-validator-service-worker-15-of-16:
+          requires:
+            - pre-tag-style-lint-stage-2-of-5
+      - SaveSearchServiceMetrics:
+          requires:
+            - scale-validator-service-worker-15-of-16
+      - displaying-octal-dump:
+          requires:
+            - scale-validator-service-worker-15-of-16
+      - MultiStageDatabaseSetupRun:
+          requires:
+            - displaying-octal-dump
+      - QuickPermissionAudit:
+          requires:
+            - MultiStageDatabaseSetupRun
+  discover-plugins-automatically:
+    jobs:
+      - fetch-operator-executable-from-object-storage
+      - dependency-fetch-task:
+          requires:
+            - fetch-operator-executable-from-object-storage
+      - ReportExporterNightlyReleaseRound6:
+          requires:
+            - dependency-fetch-task
+      - FinalizeDebuggerDraftRelease:
+          requires:
+            - dependency-fetch-task
+      - InjectResolverBuildOptions:
+          requires:
+            - FinalizeDebuggerDraftRelease
+      - KernelScan:
+          requires:
+            - InjectResolverBuildOptions
+      - ReadAndPrintFirstLines:
+          requires:
+            - InjectResolverBuildOptions
+      - initial-report-generation-routine:
+          requires:
+            - ReadAndPrintFirstLines
+      - apply-suggested-fixes:
+          requires:
+            - initial-report-generation-routine
+  post-sync-benchmarks:
+    jobs:
+      - routine-roll-out-monitoring-segment-5
+      - ConditionalComparison
+      - test-framework-developer-guide:
+          requires:
+            - routine-roll-out-monitoring-segment-5
+            - ConditionalComparison
+      - dispatcher-headers:
+          requires:
+            - routine-roll-out-monitoring-segment-5
+            - ConditionalComparison
+      - launchDashboardInstance:
+          requires:
+            - routine-roll-out-monitoring-segment-5
+            - ConditionalComparison
